@@ -19,6 +19,7 @@
 
 # RStudio files
 .Rproj.user/
+template.Rproj
 
 # produced vignettes
 vignettes/*.html
@@ -35,5 +36,10 @@ vignettes/*.pdf
 *.utf8.md
 *.knit.md
 
+# Temporary files created by OS
+.DS_Store
+Thumbs.db
+
 # R Environment Variables
 .Renviron
+.Rproj.user
