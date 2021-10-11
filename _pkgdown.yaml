@@ -1,7 +1,7 @@
 template:
   params:
-    bootswatch: litera
+    # bootswatch: litera
 authors:
   Certe Medical Diagnostics & Advice Foundation:
     href: https://www.certe.nl
-    html: <img src="https://www.certe.nl/img/logo.png" height="24" />
+    html: <img src="https://www.certe.nl/img/logo.png" height="32" />
