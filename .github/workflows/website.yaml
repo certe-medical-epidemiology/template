@@ -19,7 +19,7 @@
 
 on:
   push:
-    branches: '**' # matches every branch (pkgdown will deploy to branch)
+    branches: 'main' # only update gh-pages branch when change is accepted on main
 
 name: website
 
