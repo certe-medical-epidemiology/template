@@ -18,9 +18,9 @@ Authors@R: c(
          role = c("cph", "fnd")))
 Description: A Certe R Package for ... .
   This package is part of the 'certedata' universe.
-URL: https://github.com/certe-medical-epidemiology
+URL: https://github.com/certe-medical-epidemiology/certetemplate
 Depends: 
-  R (>= 4.0.0)
+  R (>= 3.6.0)
 Suggests: 
   testthat (>= 2.0.0)
 License: GPL-2
