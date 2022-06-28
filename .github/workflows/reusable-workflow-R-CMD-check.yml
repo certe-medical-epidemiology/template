@@ -21,7 +21,7 @@
 # https://certe-medical-epidemiology.r-universe.dev
 
 on:
-  worflow_call:
+  workflow_call:
 
 name: R-CMD-check
 
