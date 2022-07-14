@@ -47,7 +47,7 @@ jobs:
       R_KEEP_PKG_SOURCE: yes
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Install gdal on macOS for sf-related parts
         if: runner.os == 'macOS'
