@@ -50,12 +50,12 @@ jobs:
         with:
           extra-packages: |
             any::pkgdown
-            any::remotes
           needs: website
 
       - name: Install package
         run: |
-          Rscript -e 'remotes::install_local()'
+          ls -lh
+          Rscript -e 'install.packages(getwd(), repos = NULL, type = "source")'
 
       - name: Deploy package
         run: |
