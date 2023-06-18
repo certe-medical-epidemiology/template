@@ -18,7 +18,7 @@
 # ===================================================================== #
 
 # Remember that R-universe will hourly build binaries for macOS and Windows:
-# https://certe-medical-epidemiology.r-universe.dev
+# https://certe-medical-epidemiology.r-universe.dev 
 
 on:
   workflow_call:
