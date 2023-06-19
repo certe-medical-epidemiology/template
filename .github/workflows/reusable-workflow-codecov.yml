@@ -31,7 +31,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Generate Dutch language files for examples
+      - name: Generate Dutch language files for examples 
         if: runner.os == 'Linux'
         run: |
           sudo locale-gen nl_NL
