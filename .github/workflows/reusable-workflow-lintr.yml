@@ -42,6 +42,7 @@ jobs:
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
           extra-packages: any::lintr
+          upgrade: 'TRUE'
 
       - name: Lint
         run: lintr::lint_package(linters = lintr::linters_with_defaults(line_length_linter = NULL, trailing_whitespace_linter = NULL, object_name_linter = NULL, cyclocomp_linter = NULL, object_length_linter = lintr::object_length_linter(length = 50L)))
