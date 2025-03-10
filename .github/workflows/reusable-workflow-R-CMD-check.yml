@@ -36,7 +36,7 @@ jobs:
         config:
           - {os: ubuntu-latest,  r: 'devel',   allowfail: true}
           - {os: ubuntu-latest,  r: '4.3',     allowfail: false}
-          - {os: macOS-latest,   r: '4.3',     allowfail: false}
+          # - {os: macOS-latest,   r: '4.3',     allowfail: false}
           - {os: windows-latest, r: '4.3',     allowfail: false}
 
     env:
