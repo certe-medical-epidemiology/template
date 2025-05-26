@@ -35,9 +35,9 @@ jobs:
       matrix:
         config:
           - {os: ubuntu-latest,  r: 'devel',   allowfail: true}
-          - {os: ubuntu-latest,  r: '4.3',     allowfail: false}
+          - {os: ubuntu-latest,  r: '4.4',     allowfail: false}
           # - {os: macOS-latest,   r: '4.3',     allowfail: false}
-          - {os: windows-latest, r: '4.3',     allowfail: false}
+          - {os: windows-latest, r: '4.4',     allowfail: false}
 
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
@@ -73,6 +73,18 @@ jobs:
           use-public-rspm: true
           # add our own R-universe to install other Certe packages
           extra-repositories: 'https://certe-medical-epidemiology.r-universe.dev'
+
+      - name: Install other Certe packages
+        # this will otherwise return an error in the setup-r-dependencies@v2 phase
+        run: |
+          repo_name <- Sys.getenv("GITHUB_REPOSITORY")
+          pkg_name <- basename(repo_name)
+          pkgs <- c("certedata", "certestyle", "certeapi", "certeplot2", "certedb", "certeprojects", "certemail", "certestats", "certegis", "certetoolbox")
+          pkgs <- setdiff(pkgs, pkg_name)
+          if (length(pkgs) > 0) {
+            install.packages(pkgs)
+          }
+        shell: Rscript {0}
 
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
