@@ -35,24 +35,15 @@ jobs:
       matrix:
         config:
           - {os: ubuntu-latest,  r: 'devel',   allowfail: true}
-          - {os: ubuntu-latest,  r: '4.4',     allowfail: false}
-          # - {os: macOS-latest,   r: '4.3',     allowfail: false}
-          - {os: windows-latest, r: '4.4',     allowfail: false}
+          - {os: ubuntu-latest,  r: '4.5',     allowfail: false}
+          - {os: windows-latest, r: '4.5',     allowfail: false}
 
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
       R_KEEP_PKG_SOURCE: yes
 
     steps:
-      - uses: actions/checkout@v3
-
-      - name: Install gdal on macOS for sf-related parts
-        if: runner.os == 'macOS'
-        run: |
-          brew install proj
-          brew install gdal
-          brew link --overwrite gcc
-        shell: bash
+      - uses: actions/checkout@v4
 
       - name: Generate Dutch language files for examples
         if: runner.os == 'Linux'
