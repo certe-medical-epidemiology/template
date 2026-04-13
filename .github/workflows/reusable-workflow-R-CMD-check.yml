@@ -70,7 +70,7 @@ jobs:
         run: |
           repo_name <- Sys.getenv("GITHUB_REPOSITORY")
           pkg_name <- basename(repo_name)
-          pkgs <- c("certedata", "certestyle", "certeapi", "certeplot2", "certedb", "certeprojects", "certemail", "certestats", "certegis", "certetoolbox")
+          pkgs <- c("certedata", "certestyle", "certeapi", "certeplot2", "certedb", "certeprojects", "certemail", "certestats", "certegis", "certetoolbox", "certellm")
           pkgs <- setdiff(pkgs, pkg_name)
           if (length(pkgs) > 0) {
             install.packages(pkgs)
